@@ -55,7 +55,7 @@ public class Comercio
         return null;
     }
 
-    public CuentaCorriente VerCC(int nro)
+    public CuentaCorriente? VerCC(int nro)
     {
         CuentaCorriente cc = new CuentaCorriente(nro, null);
         cuentas.Sort();
@@ -64,10 +64,13 @@ public class Comercio
         {
             return cuentas[idx];
         }
-        return null;
+        else
+        {
+            return null;
+        }
     }
 
-    public CuentaCorriente AgregarCuentaCorriente(int nroCC, string dni)
+    public CuentaCorriente? AgregarCuentaCorriente(int nroCC, string dni)
     {
         CuentaCorriente cc = VerCC(nroCC);
         if (cc != null)

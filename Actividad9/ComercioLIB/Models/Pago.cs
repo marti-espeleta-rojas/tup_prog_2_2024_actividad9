@@ -9,7 +9,7 @@ namespace ComercioLIB.Models
     public class Pago : Ticket
     {
         private static int nroInicio;
-        private CuentaCorriente ficha = null;
+        private CuentaCorriente? ficha = null;
 
         public Pago(CuentaCorriente cuenta)
         {
@@ -20,6 +20,11 @@ namespace ComercioLIB.Models
         public void MontoPago(double valor)
         {
             ficha.RegistrarPago(valor);
+        }
+
+        public CuentaCorriente VerCC()
+        {
+            return ficha;
         }
     }
 }

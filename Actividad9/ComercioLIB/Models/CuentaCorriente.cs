@@ -13,7 +13,7 @@ namespace ComercioLIB.Models
         private Cliente titular;
         private double saldo;
 
-        public CuentaCorriente(int nroCuenta, Cliente titular)
+        public CuentaCorriente(int nroCuenta, Cliente? titular)
         {
             this.nroCuenta = nroCuenta;
             this.titular = titular;

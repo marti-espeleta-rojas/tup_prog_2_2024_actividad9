@@ -12,7 +12,7 @@ namespace EjercicioParcialWebApi.Controllers
     public class ComercioController : ControllerBase
     {
         readonly static Comercio comercio = new Comercio();
-        [HttpGet]
+        [HttpGet("AgregarTicket")]
         public IActionResult GetAgregarTicket(int tipo, string dni, int nroCC)
         {
             Ticket ticket = null;
@@ -36,6 +36,9 @@ namespace EjercicioParcialWebApi.Controllers
             }
             return Ok("No pudo ser agregado");
         }
+
+
+        [HttpGet("AgregarCuentaCorriente")]
         public IActionResult GetAgregarCuentaCorriente(int nroCC, string dni)
         {
             CuentaCorriente cuenta = comercio.VerCC(nroCC);

@@ -21,5 +21,10 @@ namespace ComercioLIB.Models
             numeroInicio++;
             nroOrden = numeroInicio;
         }
+
+        public int VerDNI()
+        {
+            return dni;
+        }
     }
 }
